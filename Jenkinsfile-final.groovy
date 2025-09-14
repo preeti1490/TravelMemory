@@ -5,7 +5,7 @@ pipeline {
 
     // 2. Define the non-secret variables
     environment {
-        DOCKER_IMAGE_NAME = 'your-dockerhub-username/travel-memory' // CHANGE THIS
+        DOCKER_IMAGE_NAME = 'preeti1490/travel-memory' // CHANGE THIS
     }
     
     // 3. Define the parameters for flexibility (for manual runs)
@@ -22,7 +22,8 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/aryanm12/TravelMemory/'
+                //git 'https://github.com/aryanm12/TravelMemory/'
+                git branch: 'main', url: 'https://github.com/aryanm12/TravelMemory.git'
             }
         }
 
